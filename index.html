@@ -16,18 +16,22 @@
             --primary-blue: #456882;
             --primary-beige: #D2C1B6;
             --primary-light: #F9F3EF;
-            --text-dark: #2c3e50;
-            --text-light: #7f8c8d;
-            --white: #ffffff;
-            --shadow: 0 10px 30px rgba(27, 60, 83, 0.1);
+            --dark-bg: #0f1419;
+            --dark-surface: #1a2332;
+            --dark-card: #243447;
+            --text-primary: #F9F3EF;
+            --text-secondary: #D2C1B6;
+            --text-muted: #8ba3b8;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            --shadow-light: 0 5px 15px rgba(69, 104, 130, 0.2);
             --transition: all 0.3s ease;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--primary-light);
+            color: var(--text-primary);
+            background-color: var(--dark-bg);
         }
 
         /* Navigation */
@@ -35,7 +39,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(249, 243, 239, 0.95);
+            background: rgba(15, 20, 25, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
             padding: 1rem 0;
@@ -43,7 +47,7 @@
         }
 
         .navbar.scrolled {
-            background: rgba(249, 243, 239, 0.98);
+            background: rgba(15, 20, 25, 0.98);
             box-shadow: var(--shadow);
         }
 
@@ -59,7 +63,7 @@
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
-            color: var(--primary-dark);
+            color: var(--primary-beige);
         }
 
         .nav-links {
@@ -70,13 +74,13 @@
 
         .nav-links a {
             text-decoration: none;
-            color: var(--text-dark);
+            color: var(--text-secondary);
             font-weight: 500;
             transition: var(--transition);
         }
 
         .nav-links a:hover {
-            color: var(--primary-blue);
+            color: var(--primary-beige);
         }
 
         .mobile-menu {
@@ -88,7 +92,7 @@
         .mobile-menu span {
             width: 25px;
             height: 3px;
-            background: var(--primary-dark);
+            background: var(--primary-beige);
             margin: 3px 0;
             transition: var(--transition);
         }
@@ -98,7 +102,7 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-beige) 100%);
+            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--primary-dark) 100%);
             padding: 0 2rem;
         }
 
@@ -113,7 +117,7 @@
 
         .hero-content h1 {
             font-size: 3.5rem;
-            color: var(--primary-dark);
+            color: var(--text-primary);
             margin-bottom: 1rem;
             opacity: 0;
             animation: fadeInUp 1s ease forwards 0.2s;
@@ -121,7 +125,7 @@
 
         .hero-content .subtitle {
             font-size: 1.5rem;
-            color: var(--primary-blue);
+            color: var(--primary-beige);
             margin-bottom: 1rem;
             opacity: 0;
             animation: fadeInUp 1s ease forwards 0.4s;
@@ -129,7 +133,7 @@
 
         .hero-content .tagline {
             font-size: 1.2rem;
-            color: var(--text-light);
+            color: var(--text-muted);
             margin-bottom: 2rem;
             opacity: 0;
             animation: fadeInUp 1s ease forwards 0.6s;
@@ -156,25 +160,25 @@
         }
 
         .btn-primary {
-            background: var(--primary-dark);
-            color: var(--white);
+            background: var(--primary-beige);
+            color: var(--dark-bg);
         }
 
         .btn-primary:hover {
-            background: var(--primary-blue);
+            background: var(--primary-light);
             transform: translateY(-3px);
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-light);
         }
 
         .btn-secondary {
             background: transparent;
-            color: var(--primary-dark);
-            border: 2px solid var(--primary-dark);
+            color: var(--primary-beige);
+            border: 2px solid var(--primary-beige);
         }
 
         .btn-secondary:hover {
-            background: var(--primary-dark);
-            color: var(--white);
+            background: var(--primary-beige);
+            color: var(--dark-bg);
             transform: translateY(-3px);
         }
 
@@ -188,13 +192,13 @@
             width: 300px;
             height: 300px;
             border-radius: 50%;
-            background: var(--primary-blue);
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-beige));
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto;
             font-size: 4rem;
-            color: var(--white);
+            color: var(--dark-bg);
             box-shadow: var(--shadow);
         }
 
@@ -211,13 +215,13 @@
         .section-title {
             text-align: center;
             font-size: 2.5rem;
-            color: var(--primary-dark);
+            color: var(--text-primary);
             margin-bottom: 3rem;
         }
 
         /* About Section */
         .about {
-            background: var(--white);
+            background: var(--dark-surface);
         }
 
         .about-content {
@@ -230,12 +234,12 @@
         .about-text {
             font-size: 1.1rem;
             line-height: 1.8;
-            color: var(--text-light);
+            color: var(--text-muted);
         }
 
         /* Skills Section */
         .skills {
-            background: var(--primary-light);
+            background: var(--dark-bg);
         }
 
         .skills-grid {
@@ -245,19 +249,21 @@
         }
 
         .skill-category {
-            background: var(--white);
+            background: var(--dark-card);
             padding: 2rem;
             border-radius: 15px;
             box-shadow: var(--shadow);
             transition: var(--transition);
+            border: 1px solid var(--primary-dark);
         }
 
         .skill-category:hover {
             transform: translateY(-5px);
+            border-color: var(--primary-blue);
         }
 
         .skill-category h3 {
-            color: var(--primary-dark);
+            color: var(--text-primary);
             margin-bottom: 1rem;
         }
 
@@ -268,8 +274,8 @@
         }
 
         .skill-tag {
-            background: var(--primary-beige);
-            color: var(--primary-dark);
+            background: var(--primary-blue);
+            color: var(--text-primary);
             padding: 0.5rem 1rem;
             border-radius: 20px;
             font-size: 0.9rem;
@@ -278,7 +284,7 @@
 
         /* Experience Section */
         .experience {
-            background: var(--white);
+            background: var(--dark-surface);
         }
 
         .timeline {
@@ -293,7 +299,7 @@
             top: 0;
             bottom: 0;
             width: 2px;
-            background: var(--primary-beige);
+            background: var(--primary-blue);
         }
 
         .timeline-item {
@@ -309,13 +315,19 @@
             top: 0.5rem;
             width: 12px;
             height: 12px;
-            background: var(--primary-blue);
+            background: var(--primary-beige);
             border-radius: 50%;
             transform: translateX(-5px);
+            box-shadow: 0 0 0 3px var(--dark-surface);
         }
 
         .timeline-item h3 {
-            color: var(--primary-dark);
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item h4 {
+            color: var(--primary-beige);
             margin-bottom: 0.5rem;
         }
 
@@ -325,9 +337,13 @@
             margin-bottom: 1rem;
         }
 
+        .timeline-item p {
+            color: var(--text-muted);
+        }
+
         /* Projects Section */
         .projects {
-            background: var(--primary-light);
+            background: var(--dark-bg);
         }
 
         .projects-grid {
@@ -337,15 +353,18 @@
         }
 
         .project-card {
-            background: var(--white);
+            background: var(--dark-card);
             border-radius: 15px;
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: var(--transition);
+            border: 1px solid var(--primary-dark);
         }
 
         .project-card:hover {
             transform: translateY(-10px);
+            border-color: var(--primary-blue);
+            box-shadow: var(--shadow-light);
         }
 
         .project-image {
@@ -356,7 +375,7 @@
             align-items: center;
             justify-content: center;
             font-size: 3rem;
-            color: var(--white);
+            color: var(--dark-bg);
             position: relative;
             overflow: hidden;
         }
@@ -368,7 +387,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(27, 60, 83, 0.1);
+            background: rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(1px);
         }
 
@@ -377,13 +396,13 @@
         }
 
         .project-card h3 {
-            color: var(--primary-dark);
+            color: var(--text-primary);
             margin-bottom: 1rem;
         }
 
         .project-card p {
             margin-bottom: 1.5rem;
-            color: var(--text-light);
+            color: var(--text-muted);
             line-height: 1.6;
         }
 
@@ -396,7 +415,7 @@
 
         .tech-tag {
             background: var(--primary-blue);
-            color: var(--white);
+            color: var(--text-primary);
             padding: 0.3rem 0.8rem;
             border-radius: 15px;
             font-size: 0.8rem;
@@ -418,47 +437,68 @@
         }
 
         .project-link.demo {
-            background: var(--primary-dark);
-            color: var(--white);
+            background: var(--primary-beige);
+            color: var(--dark-bg);
         }
 
         .project-link.demo:hover {
-            background: var(--primary-blue);
+            background: var(--primary-light);
             transform: translateY(-2px);
         }
 
         .project-link.code {
             background: transparent;
-            color: var(--primary-dark);
-            border: 2px solid var(--primary-dark);
+            color: var(--primary-beige);
+            border: 2px solid var(--primary-beige);
         }
 
         .project-link.code:hover {
-            background: var(--primary-dark);
-            color: var(--white);
+            background: var(--primary-beige);
+            color: var(--dark-bg);
             transform: translateY(-2px);
         }
 
         /* Education Section */
         .education {
-            background: var(--white);
+            background: var(--dark-surface);
         }
 
         .education-item {
-            background: var(--primary-light);
+            background: var(--dark-card);
             padding: 2rem;
             border-radius: 15px;
-            border-left: 4px solid var(--primary-blue);
+            border-left: 4px solid var(--primary-beige);
+            box-shadow: var(--shadow);
+        }
+
+        .education-item h3 {
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .education-item h4 {
+            color: var(--primary-beige);
+            margin-bottom: 1rem;
+        }
+
+        .education-item .date {
+            color: var(--primary-blue);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-item p {
+            color: var(--text-muted);
         }
 
         /* Contact Section */
         .contact {
             background: var(--primary-dark);
-            color: var(--white);
+            color: var(--text-primary);
         }
 
         .contact .section-title {
-            color: var(--white);
+            color: var(--text-primary);
         }
 
         .contact-content {
@@ -488,19 +528,31 @@
             padding: 1rem;
             border: 1px solid var(--primary-blue);
             border-radius: 8px;
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--white);
+            background: var(--dark-card);
+            color: var(--text-primary);
             font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-beige);
+            box-shadow: 0 0 0 2px rgba(210, 193, 182, 0.2);
         }
 
         .form-group input::placeholder,
         .form-group textarea::placeholder {
-            color: var(--primary-beige);
+            color: var(--text-muted);
         }
 
         .contact-info h3 {
             color: var(--primary-beige);
             margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
         }
 
         .social-links {
@@ -511,6 +563,23 @@
 
         .social-link {
             display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--primary-beige);
+            color: var(--dark-bg);
+            transform: translateY(-3px);
+        }: inline-block;
             width: 50px;
             height: 50px;
             background: var(--primary-blue);
@@ -736,49 +805,84 @@
             <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <h3>Tasky App</h3>
-                    <p>A cross-platform task management application built with Flutter and Dart. Implemented core features including task creation, editing, and deletion with clean UI design and state management.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Flutter</span>
-                        <span class="tech-tag">Dart</span>
-                        <span class="tech-tag">Provider</span>
-                        <span class="tech-tag">Android Studio</span>
+                    <div class="project-image">📱</div>
+                    <div class="project-content">
+                        <h3>Tasky App</h3>
+                        <p>A cross-platform task management application built with Flutter and Dart. Implemented core features including task creation, editing, and deletion with clean UI design and state management.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Dart</span>
+                            <span class="tech-tag">Provider</span>
+                            <span class="tech-tag">Android Studio</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link demo">Live Demo</a>
+                            <a href="#" class="project-link code">View Code</a>
+                        </div>
                     </div>
                 </div>
                 <div class="project-card">
-                    <h3>Her Way</h3>
-                    <p>Designed a mobile application UI concept using Figma for a women-exclusive ride-booking platform. Created the Home Screen, Menu Screen, and Booking Screen designs.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Figma</span>
-                        <span class="tech-tag">UI/UX Design</span>
-                        <span class="tech-tag">Mobile Design</span>
+                    <div class="project-image">🚗</div>
+                    <div class="project-content">
+                        <h3>Her Way</h3>
+                        <p>Designed a mobile application UI concept using Figma for a women-exclusive ride-booking platform. Created the Home Screen, Menu Screen, and Booking Screen designs.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">UI/UX Design</span>
+                            <span class="tech-tag">Mobile Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link demo">View Design</a>
+                            <a href="#" class="project-link code">Figma File</a>
+                        </div>
                     </div>
                 </div>
                 <div class="project-card">
-                    <h3>Flight Booking Website</h3>
-                    <p>Built a complete frontend website for booking flights using HTML, CSS, and JavaScript. Developed full content structure, interface, and styling components.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
+                    <div class="project-image">✈️</div>
+                    <div class="project-content">
+                        <h3>Flight Booking Website</h3>
+                        <p>Built a complete frontend website for booking flights using HTML, CSS, and JavaScript. Developed full content structure, interface, and styling components.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link demo">Live Demo</a>
+                            <a href="#" class="project-link code">View Code</a>
+                        </div>
                     </div>
                 </div>
                 <div class="project-card">
-                    <h3>Shapes OOP System</h3>
-                    <p>Developed a Java-based object-oriented application simulating different geometric shapes using core OOP concepts: Inheritance, Polymorphism, Abstract Classes, and Interfaces.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Java</span>
-                        <span class="tech-tag">OOP</span>
-                        <span class="tech-tag">Design Patterns</span>
+                    <div class="project-image">📐</div>
+                    <div class="project-content">
+                        <h3>Shapes OOP System</h3>
+                        <p>Developed a Java-based object-oriented application simulating different geometric shapes using core OOP concepts: Inheritance, Polymorphism, Abstract Classes, and Interfaces.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">OOP</span>
+                            <span class="tech-tag">Design Patterns</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link demo">Run Demo</a>
+                            <a href="#" class="project-link code">View Code</a>
+                        </div>
                     </div>
                 </div>
                 <div class="project-card">
-                    <h3>Car Animation</h3>
-                    <p>Created a 3D animated car motion scene using Blender and Python scripting. Implemented animation logic and configured motion timing.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Blender</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">3D Animation</span>
+                    <div class="project-image">🎬</div>
+                    <div class="project-content">
+                        <h3>Car Animation</h3>
+                        <p>Created a 3D animated car motion scene using Blender and Python scripting. Implemented animation logic and configured motion timing.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Blender</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">3D Animation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link demo">Watch Video</a>
+                            <a href="#" class="project-link code">View Files</a>
+                        </div>
                     </div>
                 </div>
             </div>
